@@ -1,27 +1,51 @@
+let producto1;
+let producto2;
+let producto3;
+let producto4;
+let producto5;
+let arrayProductos = [];
 
-let valor = parseInt(prompt("ingrese el valor"))
-let iva = 0;
-let impPais = 0;
-let perGanancias = 0;
-let total = 0;
-
-document.writeln(`Calculador de compras al exterior <br>
-                  El IVA es de ${calcularIVA(valor)} <br>
-                  El impuesto país es de ${calcularImpuestoPais(valor)} <br>
-                  La percepción de ganancias es de ${calcularPercepcionGanancias(valor)} <br>
-                  La suma de los impuestos es de ${total = iva + impPais + perGanancias} <br>
-                  El valor final del artículo es de ${total + valor}
-`)
-
-function calcularIVA(precioProducto){
-  return iva = precioProducto * 0.21 
+function impExterior(valor) {
+  return valor * 1.65
 }
 
-function calcularImpuestoPais(precioProducto){
-  return impPais = precioProducto * 0.08
+class Hardware {
+  constructor(id, nombre, precio, stock, origen) {
+    this.id = id;
+    this.nombre = nombre;
+    this.precio = precio;
+    this.stock = stock;
+    this.origen = origen
+
+
+  }
 }
 
-function calcularPercepcionGanancias(precioProducto){
-  return perGanancias = precioProducto * 0.35
+for (i = 1; i <= 5; i++) {
+  this.id = parseInt(prompt("ingrese id"));
+  this.nombre = prompt("ingrese nombre del producto");
+  this.precio = parseInt(prompt("ingrese el precio"));
+  this.stock = parseInt(prompt("ingrese el stock"));
+  this.origen = prompt("ingrese el país de manufactura");
+
+  if (i == 1) {
+    producto1 = new Hardware(id, nombre, impExterior(precio), stock, origen);
+    arrayProductos.push(producto1)
+  } else if (i == 2) {
+    producto2 = new Hardware(id, nombre, impExterior(precio), stock, origen);
+    arrayProductos.push(producto2)
+  } else if (i == 3) {
+    producto3 = new Hardware(id, nombre, impExterior(precio), stock, origen);
+    arrayProductos.push(producto3)
+  } else if (i == 4) {
+    producto4 = new Hardware(id, nombre, impExterior(precio), stock, origen);
+    arrayProductos.push(producto4)
+  } else if (i == 5) {
+    producto5 = new Hardware(id, nombre, impExterior(precio), stock, origen);
+    arrayProductos.push(producto5)
+  }
 }
+
+console.log(arrayProductos)
+
 
